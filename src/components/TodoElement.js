@@ -17,10 +17,10 @@ const TodoElement = ({text, todo, todos, setTodos}) => {
     return(
         <div className="todo">
             <li className={`todo-element ${todo.completed ? "completed" : ""}`}>{text}</li>
-            <button onClick={completeHandler} className="complete-button">
+            <button onClick={completeHandler} className="button complete-button">
                 <i className="fas fa-check"></i>
             </button>
-            <button onClick={deleteHandler} className="trash-button">
+            <button onClick={deleteHandler} className="button trash-button">
                 <i className="fas fa-trash"></i>
             </button>
         </div>

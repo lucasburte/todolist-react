@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Ma Todo-List</h1>
+        <h1>React Todo-List</h1>
       </header>
       <TodoForm  inputText={inputText} todos ={todos} setTodos={setTodos} setInputText={setInputText} setStatus={setStatus} />
       <TodoList filteredTodos={filteredTodos} setTodos={setTodos} todos={todos}/>

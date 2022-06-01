@@ -2,3 +2,100 @@
     text-decoration: line-through;
     opacity: 0.5;
 }
+
+body {
+    background: #066acd;
+    font-family: "Poppins", sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.App {
+    padding: 10px;
+    border-radius: 5px;
+    background: white;
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.field input {
+    border: 2px solid #d1d3d4;
+    padding: 12px;
+    color: #111111;
+    font-weight: 500;
+    position: relative;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.field button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    color: #066acd;
+    background: #f7fffe;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    background-color: #0d75ec;
+    border: none;
+    color: #ffffff;
+}
+
+select {
+    width: 50%;
+    border: 2px solid #d1d3d4;
+    padding: 5px;
+    color: #111111;
+    font-weight: 500;
+    position: relative;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.todo {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+}
+
+.todo li {
+    list-style-type: none;
+    background-color: #c5e1e6;
+	margin-bottom: 8px;
+    padding: 5px 10px;
+	border-radius: 5px;
+    border: 1px solid #939697;
+    cursor: pointer;
+}
+
+.complete-button {
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #cd8706;
+    background: #f7fffe;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.trash-button {
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: #da130c;
+    background: #f7fffe;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
