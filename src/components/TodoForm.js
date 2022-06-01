@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TodoForm = ({setInputText, todos, setTodos, inputText}) => {
+const TodoForm = ({setInputText, todos, setTodos, inputText, setStatus}) => {
 
   const inputTextHandler = (e) => {
     console.log(e.target.value);
@@ -10,10 +10,15 @@ const TodoForm = ({setInputText, todos, setTodos, inputText}) => {
     e.preventDefault();
     setTodos([
       ...todos,
-      {text: inputText, completed: false, id: Math.random() * 100}
+      {text: inputText, completed: false, id: Math.floor(Math.random() * Date.now())}  // bon c'est peut-être pas la meilleur idée pour avoir un ID ...
     ]);
     setInputText("");
   };
+
+  const statusHandler = (e) => {
+    setStatus(e.target.value)
+  }
+
   return (
     <form>
       <input value={inputText} onChange={inputTextHandler} type="text" className="input" />
@@ -21,7 +26,7 @@ const TodoForm = ({setInputText, todos, setTodos, inputText}) => {
         <i className="fas fa-plus-square"></i>
       </button>
       <div className="select">
-        <select name="todos" className="filter">
+        <select onChange={statusHandler} name="todos" className="filter">
           <option value="all">Tous</option>
           <option value="completed">Tâches faites</option>
           <option value="uncompleted">Tâches à faire</option>

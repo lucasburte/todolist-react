@@ -7,13 +7,15 @@ import TodoList from './components/TodoList';
 function App() {
   const [inputText, setInputText] = useState("");
   const [todos, setTodos] = useState([]);
+  const [status, setStatus] = useState('all');
+  const [filteredTodos, setFilteredTodos] = useState([]);
   return (
     <div className="App">
       <header>
         <h1>Ma Todo-List</h1>
       </header>
-      <TodoForm  inputText={inputText} todos ={todos} setTodos={setTodos} setInputText={setInputText} />
-      <TodoList todos={todos}/>
+      <TodoForm  inputText={inputText} todos ={todos} setTodos={setTodos} setInputText={setInputText} setStatus={setStatus} />
+      <TodoList setTodos={setTodos} todos={todos}/>
     </div>
   );
 }
